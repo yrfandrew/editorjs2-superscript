@@ -34,7 +34,7 @@ class Superscript {
          *
          * @type {string}
          */
-        this.tag = 'sup';
+        this.tag = 'SUP';
 
         /**
          * CSS classes
