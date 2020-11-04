@@ -34,7 +34,7 @@ class Superscript {
          *
          * @type {string}
          */
-        this.tag = 'SPAN';
+        this.tag = 'sup';
 
         /**
          * CSS classes
@@ -99,9 +99,9 @@ class Superscript {
         /**
          * Create a wrapper for highlighting
          */
-        let span = document.createElement(this.tag);
+        let supElement = document.createElement(this.tag);
 
-        span.classList.add(Superscript.CSS);
+        supElement.classList.add(Superscript.CSS);
 
         /**
          * SurroundContent throws an error if the Range splits a non-Text node with only one of its boundary points
@@ -109,13 +109,13 @@ class Superscript {
          *
          * // range.surroundContents(sup);
          */
-        span.appendChild(range.extractContents());
-        range.insertNode(span);
+        supElement.appendChild(range.extractContents());
+        range.insertNode(supElement);
 
         /**
          * Expand (add) selection to highlighted block
          */
-        this.api.selection.expandToTag(span);
+        this.api.selection.expandToTag(supElement);
     }
 
     /**
@@ -170,11 +170,11 @@ class Superscript {
 
     /**
      * Sanitizer rule
-     * @return {{span: {class: string}}}
+     * @return {{sup: {class: string}}}
      */
     static get sanitize() {
         return {
-            span: {
+            sup: {
                 class: Superscript.CSS
             }
         };

@@ -50,13 +50,13 @@ This Tool has no config params
 
 ## Output data
 
-Marked text will be wrapped with a `span` tag with an `cdx-superscript` class.
+Marked text will be wrapped with a `sup` tag with an `cdx-superscript` class.
 
 ```json
 {
     "type" : "text",
     "data" : {
-        "text" : "The Pacific Ocean encompasses approximately one-third of the Earth's surface, having an area of 165,200,000 km<span class='cdx-superscript'>2</span> (63,800,000 sq mi)."
+        "text" : "The Pacific Ocean encompasses approximately one-third of the Earth's surface, having an area of 165,200,000 km<sup class='cdx-superscript'>2</sup> (63,800,000 sq mi)."
     }
 }
 ```
